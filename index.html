@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV - Họ Tên Ứng Viên</title>
+<meta name="color-scheme" content="light dark" />
+<style>
+  :root{
+    --bg:#f7f7fb; --paper:#ffffff; --text:#1b1f24; --muted:#6b7280;
+    --primary:#2563eb; --chip:#eef2ff; --line:#e5e7eb; --accent:#0ea5e9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0b0e12; --paper:#0f141b; --text:#e5e7eb; --muted:#9aa3af; --line:#1f2733; --chip:#111827; }
+  }
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+  .page{max-width:980px;margin:28px auto;padding:0 16px;}
+  .sheet{background:var(--paper);box-shadow:0 10px 30px rgba(0,0,0,.08);border-radius:18px;overflow:hidden;}
+  header{display:grid;grid-template-columns:140px 1fr 260px;gap:20px;padding:26px;border-bottom:1px solid var(--line);}
+  .avatar{
+    width:140px;height:140px;border-radius:20px;background:linear-gradient(135deg,var(--primary),var(--accent));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:40px;letter-spacing:.5px;
+  }
+  .title h1{margin:4px 0 6px;font-size:28px;line-height:1.2}
+  .title .role{color:var(--primary);font-weight:600;margin-bottom:10px}
+  .title .summary{color:var(--muted)}
+  .contact{
+    display:grid;align-content:center;gap:6px;font-size:14px;color:var(--muted);
+  }
+  .contact a{color:inherit;text-decoration:none}
+  .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;padding:24px}
+  section{margin-bottom:18px}
+  h2{font-size:16px;letter-spacing:.4px;text-transform:uppercase;color:var(--primary);margin:0 0 10px}
+  .card{
+    border:1px solid var(--line);border-radius:14px;padding:14px 14px 10px;margin-bottom:12px;background:transparent;
+  }
+  .row{display:flex;justify-content:space-between;gap:10px}
+  .when{color:var(--muted);white-space:nowrap}
+  .pill{display:inline-block;background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px}
+  .list{padding-left:18px;margin:6px 0;color:var(--text)}
+  .list li{margin:4px 0}
+  .meta{color:var(--muted);font-size:13px}
+  .kpi{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .kpi .m{border:1px dashed var(--line);border-radius:10px;padding:6px 10px;font-size:12px;color:var(--muted)}
+  .skill{margin:10px 0}
+  .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+  .bar{height:8px;background:var(--line);border-radius:999px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:70%;background:linear-gradient(90deg,var(--primary),var(--accent))}
+  .langs{display:flex;gap:8px;flex-wrap:wrap}
+  .langs .lvl{font-size:12px;color:var(--muted)}
+  .tags{margin-top:6px}
+  .tags .pill{margin-top:6px}
+  footer{padding:0 24px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px}
+  .badge{border:1px solid var(--line);padding:5px 8px;border-radius:8px}
+  /* Responsive */
+  @media (max-width:900px){ header{grid-template-columns:110px 1fr} .avatar{width:110px;height:110px} .grid{grid-template-columns:1fr} }
+  /* Print A4 */
+  @page{size:A4;margin:12mm}
+  @media print{
+    body{background:#fff}
+    .page{margin:0;padding:0}
+    .sheet{box-shadow:none;border-radius:0}
+    a{text-decoration:none;color:inherit}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="sheet">
+      <header>
+        <div class="avatar" aria-label="Ảnh đại diện">HN</div>
+        <div class="title">
+          <h1>Họ Tên Ứng Viên</h1>
+          <div class="role">Vị trí ứng tuyển · Business Analyst / Data Analyst</div>
+          <p class="summary">
+            3+ năm kinh nghiệm phân tích dữ liệu & tối ưu quy trình. Thành thạo SQL, Excel, Power BI, Python.
+            Từng dẫn dắt dự án giúp giảm 18% chi phí vận hành và tăng 22% tỷ lệ chuyển đổi. Tư duy sản phẩm, giao tiếp tốt.
+          </p>
+        </div>
+        <div class="contact">
+          <div>📍 TP.HCM, Việt Nam</div>
+          <div>📞 09xx xxx xxx</div>
+          <div>✉️ <a href="mailto:email@domain.com">email@domain.com</a></div>
+          <div>🔗 <a href="https://linkedin.com/in/tenban" target="_blank" rel="noreferrer">linkedin.com/in/tenban</a></div>
+          <div>🧑‍💻 <a href="https://github.com/tenban" target="_blank" rel="noreferrer">github.com/tenban</a></div>
+          <div>🌐 <a href="https://portfolio.me" target="_blank" rel="noreferrer">portfolio.me</a></div>
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- Cột trái -->
+        <main>
+          <section>
+            <h2>Kinh nghiệm làm việc</h2>
+
+            <article class="card">
+              <div class="row">
+                <strong>Chuyên viên Phân tích Dữ liệu · Công ty ABC</strong>
+                <span class="when">07/2022 – Hiện tại</span>
+              </div>
+              <div class="meta">SQL · Power BI · Python · A/B Testing</div>
+              <ul class="list">
+                <li>Xây dựng dashboard doanh thu theo thời gian thực cho 6 phòng ban, giảm 30% thời gian tổng hợp báo cáo.</li>
+                <li>Thiết kế mô hình dự báo nhu cầu (Prophet), giúp tối ưu tồn kho, tiết kiệm ~500 triệu/tháng.</li>
+                <li>Phối hợp marketing triển khai thử nghiệm A/B, tăng CTR landing +14,8%.</li>
+              </ul>
+              <div class="kpi">
+                <div class="m">↓30% thời gian báo cáo</div>
+                <div class="m">+14,8% CTR</div>
+                <div class="m">-500tr/tháng tồn kho</div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="row">
+                <strong>Business Analyst · Startup XYZ</strong>
+                <span class="when">08/2020 – 06/2022</span>
+              </div>
+              <div class="meta">User Research · Quy trình · KPI</div>
+              <ul class="list">
+                <li>Khảo sát người dùng & mapping hành trình khách hàng, đề xuất 7 cải tiến nâng NPS từ 36 → 52.</li>
+                <li>Chuẩn hóa SOP bán hàng, thời gian chốt đơn giảm 18%.</li>
+              </ul>
+              <div class="kpi">
+                <div class="m">NPS 36 → 52</div>
+                <div class="m">↓18% thời gian chốt</div>
+              </div>
+            </article>
+          </section>
+
+          <section>
+            <h2>Dự án tiêu biểu</h2>
+
+            <article class="card">
+              <div class="row">
+                <strong>CyberCheck – Hệ thống kiểm tra an toàn số cho SME</strong>
+                <span class="when">2025</span>
+              </div>
+              <div class="meta">DW · SQL Server · Star Schema · Power BI</div>
+              <ul class="list">
+                <li>Thiết kế kho dữ liệu (DimDate, DimIPAddress, FactSecurityEvent) & ETL định kỳ; dashboard rủi ro 0–10.</li>
+                <li>Phát hiện sớm cấu hình TLS sai & lỗ hổng phổ biến (OWASP Top-10) cho 50+ domain.</li>
+              </ul>
+              <div class="tags">
+                <span class="pill">ETL</span><span class="pill">Data Warehouse</span><span class="pill">Security</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="row">
+                <strong>PLS-SEM: Ý định dùng VCB Digibank (Gen Z)</strong>
+                <span class="when">2024</span>
+              </div>
+              <div class="meta">SmartPLS 4 · Cronbach’s Alpha · CR/AVE · Mediation</div>
+              <ul class="list">
+                <li>Khảo sát 3xx mẫu; kiểm định độ tin cậy, giá trị hội tụ & phân biệt; mô hình trung gian “Nhận thức xanh”.</li>
+                <li>Đề xuất 5 khuyến nghị sản phẩm/marketing dựa trên tải nhân tố & đường dẫn có ý nghĩa.</li>
+              </ul>
+            </article>
+          </section>
+        </main>
+
+        <!-- Cột phải -->
+        <aside>
+          <section>
+            <h2>Kỹ năng chuyên môn</h2>
+            <div class="card">
+              <div class="skill">
+                <div class="label"><span>SQL / T-SQL</span><span>Thành thạo</span></div>
+                <div class="bar"><i style="width:90%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="label"><span>Excel / Power BI</span><span>Thành thạo</span></div>
+                <div class="bar"><i style="width:88%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="label"><span>Python (Pandas, NumPy)</span><span>Khá</span></div>
+                <div class="bar"><i style="width:75%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="label"><span>ETL / Data Modeling</span><span>Khá</span></div>
+                <div class="bar"><i style="width:78%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="label"><span>BA (User Story, BPMN)</span><span>Khá</span></div>
+                <div class="bar"><i style="width:72%"></i></div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Học vấn</h2>
+            <div class="card">
+              <div class="row"><strong>ĐH Công nghệ Thông tin (UIT) – ĐHQG</strong><span class="when">2019 – 2023</span></div>
+              <div class="meta">Cử nhân Hệ thống Thông tin · GPA 3.4/4</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Chứng chỉ</h2>
+            <div class="card">
+              <div>Google Data Analytics (Coursera) · 2025</div>
+              <div>IELTS 7.0 (2024) · TOEIC SW</div>
+              <div>Microsoft: Power BI Data Analyst (PL-300)</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Ngôn ngữ</h2>
+            <div class="card langs">
+              <div>🇻🇳 Tiếng Việt <span class="lvl">· Bản ngữ</span></div>
+              <div>🇬🇧 Tiếng Anh <span class="lvl">· Khá/IELTS 7.0</span></div>
+              <div>🇯🇵 Tiếng Nhật <span class="lvl">· N5</span></div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Giải thưởng & Hoạt động</h2>
+            <div class="card">
+              <div>Top 5 AISC’25 – Dự án CyberCheck</div>
+              <div>Leader CLB Data – 2023–2024</div>
+              <div>Tình nguyện viên UIT Charity 2022</div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Sở thích</h2>
+            <div class="card">
+              <span class="pill">Đọc sách</span>
+              <span class="pill">Chạy bộ</span>
+              <span class="pill">Chụp ảnh</span>
+              <span class="pill">Du lịch</span>
+              <span class="pill">Game</span>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <footer>
+        <div class="badges">
+          <div class="badge">Sẵn sàng đi làm</div>
+          <div class="badge">Toàn thời gian / Remote</div>
+        </div>
+        <div>Tham chiếu cung cấp theo yêu cầu</div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
